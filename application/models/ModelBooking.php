@@ -24,7 +24,7 @@ class ModelBooking extends CI_Model
          $this->db->join('buku bu ', 'bu.id=d.id_buku');
          $this->db->where($where);
          return $this->db->get();
-   }
+   }git push -u origin main
    public function simpanDetail($where = null)
    {
       $sql = "INSERT INTO booking_detail (id_booking,id_buku) SELECT booking.id_booking,temp.id_buku FROM booking, temp WHERE temp.id_user=booking.id_user AND booking.id_user='$where'";
